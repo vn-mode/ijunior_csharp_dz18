@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "tc41rjYKRSPxLAF8E2Z8R+/Wfr/eT8i9D7qAKJ2j2n9cJzXHBmEMsxf8E33VCrq81DZWP6FabIAW5lkh5vg1YA==",
+  "success": true,
+  "projectFilePath": "/Users/vitalii/Documents/Программирование/ijunior/C#/vn_mode_csharp_dz_18/vn_mode_csharp_dz_18/vn_mode_csharp_dz_18.csproj",
+  "expectedPackageFiles": [
+    "/Users/vitalii/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "/Users/vitalii/.nuget/packages/microsoft.netcore.app.host.osx-x64/3.1.32/microsoft.netcore.app.host.osx-x64.3.1.32.nupkg.sha512",
+    "/Users/vitalii/.nuget/packages/microsoft.netcore.app.ref/3.1.0/microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
