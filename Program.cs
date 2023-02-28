@@ -6,58 +6,56 @@ namespace vn_mode_csharp_dz_18
     {
         static void Main(string[] args)
         {
+            int counterUserStringDeep = 0;
+            int counterSymbolsDifference = 0;
 
-            while (true)
+            char userSymbolOne = '(';
+            char userSymbolTwo = ')';
+
+            string userSymbolString;
+
+            Console.WriteLine($"Введите строку используя только символы {userSymbolOne} и {userSymbolTwo}");
+
+            userSymbolString = Console.ReadLine();
+
+
+            foreach (var everyTextSymbol in userSymbolString)
             {
-                string userSymbolString;
-                Console.WriteLine("Введите строку используя только символы '(' и ')'");
 
-                userSymbolString = Console.ReadLine();
-
-                int counterUserStringDeep = 0;
-                int counterSymbolsDifference = 0;
-                char userSymbolOne = '(';
-                char userSymbolTwo = ')';
-
-                foreach (var everyTextSymbol in userSymbolString)
+                if (counterSymbolsDifference >= 0)
                 {
-                    if (counterSymbolsDifference >= 0)
+
+                    if (everyTextSymbol == userSymbolOne)
                     {
-                        if (everyTextSymbol == userSymbolOne)
-                        {
-                            counterSymbolsDifference++;
-                        }
-
-                        else if (everyTextSymbol == userSymbolTwo)
-                        {
-                            if (counterUserStringDeep < counterSymbolsDifference)
-                            {
-                                counterUserStringDeep = counterSymbolsDifference;
-                            }
-
-                            counterSymbolsDifference--;
-                        }
+                        counterSymbolsDifference++;
                     }
+
+                    else if (everyTextSymbol == userSymbolTwo)
+                    {
+
+                        if (counterUserStringDeep < counterSymbolsDifference)
+                        {
+                            counterUserStringDeep = counterSymbolsDifference;
+                        }
+
+                        counterSymbolsDifference--;
+
+                    }
+
                 }
 
-                if (counterSymbolsDifference < 0)
-                {
-                    Console.WriteLine("Некорректное скобочное выражение");
-                }
-
-                if (counterSymbolsDifference > 0)
-                {
-                    Console.WriteLine("Некорректное скобочное выражение");
-                }
-
-                if (counterSymbolsDifference == 0)
-                {
-                    Console.WriteLine("Глубина вложенности скобок =  " + counterUserStringDeep);
-                }
-
-                Console.ReadKey();
-                Console.Clear();
             }
+
+            if (counterSymbolsDifference == 0)
+            {
+                Console.WriteLine("Глубина вложенности скобок =  " + counterUserStringDeep);
+            }
+
+            else
+            {
+                Console.WriteLine("Некорректное скобочное выражение");
+            }
+
         }
     }
 }
