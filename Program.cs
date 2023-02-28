@@ -29,7 +29,6 @@ namespace vn_mode_csharp_dz_18
                     {
                         counterSymbolsDifference++;
                     }
-
                     else if (everyTextSymbol == userSymbolTwo)
                     {
 
@@ -39,23 +38,18 @@ namespace vn_mode_csharp_dz_18
                         }
 
                         counterSymbolsDifference--;
-
                     }
-
                 }
-
             }
 
             if (counterSymbolsDifference == 0)
             {
                 Console.WriteLine("Глубина вложенности скобок =  " + counterUserStringDeep);
             }
-
             else
             {
                 Console.WriteLine("Некорректное скобочное выражение");
             }
-
         }
     }
 }
